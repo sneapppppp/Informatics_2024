@@ -1,11 +1,12 @@
 package main
 
-import "isuct.ru/informatics2024/Lab_4"
-import "fmt"
+import (
+	"fmt"
+	"isuct.ru/informatics2024/Lab_4"
+)
 
 func main() {
 	fmt.Println("Умаров Ильяс Баходирович")
 
-	Lab4.RunLab4()
+	Lab_4.RunLab4()
 }
-s
