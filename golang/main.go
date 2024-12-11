@@ -9,5 +9,7 @@ import (
 
 func main() {
 	fmt.Println("Умаров Ильяс Баходирович")
+
 	Lab4.RunLab4()
+
 }
