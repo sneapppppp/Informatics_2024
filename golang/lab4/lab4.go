@@ -31,3 +31,4 @@ func RunLab4() {
 	fmt.Println(TaskA(b, 1.2, 3.7, 0.5))
 	var s = [5]float64{1.28, 1.36, 2.47, 3.68, 4.56}
 	fmt.Println(TaskB(b, s))
+}
