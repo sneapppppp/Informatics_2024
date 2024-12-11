@@ -1,4 +1,4 @@
-package lab6.go
+package lab6
 
 import (
   "fmt"
