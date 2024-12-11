@@ -1,34 +1,33 @@
-package lab4
+package Lab4
 
 import (
 	"fmt"
 	"math"
 )
 
-func Calculate(a, b, x float64) float64 {
-	var y float64 = math.Asin(math.Pow(x, a)) + math.Acos(math.Pow(x, b))
+func Calculate(x, a float64) float64 {
+	y := math.Pow(a, math.Sqrt(x)-1) - math.Log10(math.Sqrt(x)-1) + math.Pow(math.Sqrt(x)-1, 1.0/3.0)
 	return y
 }
 
-func TaskA(a, b, Xn, Xk, delX float64) []float64 {
-	var Calc []float64
+func TaskA(b, Xn, Xk, delX float64) []float64 {
+	var y []float64
 	for x := Xn; x <= Xk; x += delX {
-		Calc = append(Calc, Calculate(a, b, x))
+		y = append(y, Calculate(b, x))
 	}
-	return Calc
+	return y
 }
 
-func TaskB(a float64, b float64, x [5]float64) []float64 {
-	var Calc []float64
+func TaskB(b float64, x [5]float64) []float64 {
+	var y []float64
 	for _, value := range x {
-		Calc = append(Calc, Calculate(a, b, value))
+		y = append(y, Calculate(b, value))
 	}
-	return Calc
+	return y
 }
 
 func RunLab4() {
-	a := 2.0
-	b := 3.0
-	fmt.Println(TaskA(a, b, 0.11, 0.36, 0.05))
-	var s = [5]float64{0.08, 0.26, 0.35, 0.41, 0.53}
-	fmt.Println(TaskB(a, b, s))
+	b := 2.5
+	fmt.Println(TaskA(b, 1.2, 3.7, 0.5))
+	var s = [5]float64{1.28, 1.36, 2.47, 3.68, 4.56}
+	fmt.Println(TaskB(b, s))
