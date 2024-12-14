@@ -1,46 +1,34 @@
-package main
+package Lab4
 
 import (
-	"fmt"
-	"math"
+  "fmt"
+  "math"
 )
 
-func CalculateExpression(a float64, b float64, x float64) float64 {
-	return (math.Cbrt(x-a) + math.Pow(x+b, 1.0/5.0)) /
-		(math.Pow(x, 1.0/7.0) - math.Pow(x*x-(a+b)*(a+b), 1.0/9.0))
+func Calculate(x, a float64) float64 {
+  y := math.Pow(a, math.Sqrt(x)-1) - math.Log10(math.Sqrt(x)-1) + math.Pow(math.Sqrt(x)-1, 1.0/3.0)
+  return y
 }
 
-func TaskA(a float64, b float64, Xn float64, Xk float64, delX float64) []float64 {
-	var results []float64
-	for x := Xn; x <= Xk; x += delX {
-		result := CalculateExpression(a, b, x)
-		results = append(results, result)
-		fmt.Printf("При x = %.2f: результат y = %.4f\n", x, result)
-	}
-	return results
+func TaskA(b, Xn, Xk, delX float64) []float64 {
+  var y []float64
+  for x := Xn; x <= Xk; x += delX {
+    y = append(y, Calculate(b, x))
+  }
+  return y
 }
 
-func TaskB(a float64, b float64, x [5]float64) []float64 {
-	var results []float64
-	for _, value := range x {
-		result := CalculateExpression(a, b, value)
-		results = append(results, result)
-		fmt.Printf("При x = %.2f: результат y = %.4f\n", value, result)
-	}
-	return results
+func TaskB(b float64, x [5]float64) []float64 {
+  var y []float64
+  for _, value := range x {
+    y = append(y, Calculate(b, value))
+  }
+  return y
 }
 
-func main() {
-	a := 2.0
-	b := 3.0
-	Xn := 1.0
-	Xk := 10.0
-	delX := 1.0
-	xValues := [5]float64{1, 2, 3, 4, 5}
-
-	resultsA := TaskA(a, b, Xn, Xk, delX)
-	fmt.Println("Результаты TaskA:", resultsA)
-
-	resultsB := TaskB(a, b, xValues)
-	fmt.Println("Результаты TaskB:", resultsB)
+func RunLab4() {
+  b := 2.5
+  fmt.Println(TaskA(b, 1.2, 3.7, 0.5))
+  var s = [5]float64{1.28, 1.36, 2.47, 3.68, 4.56}
+  fmt.Println(TaskB(b, s))
 }

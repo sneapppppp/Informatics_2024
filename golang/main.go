@@ -1,5 +1,6 @@
 package main
 
+Lab_7
 import "fmt"
 import (
 	"isuct.ru/informatics2022/lab4"
@@ -16,4 +17,17 @@ Lab_7
 
 	fmt.Println("Умаров Ильяс Баходирович")
 Ymarov_Ilyas
+
+import (
+	"fmt"
+
+	Lab6 "isuct.ru/informatics2022/lab6"
+	Lab4 "isuct.ru/informatics2022/lab4"
+)
+
+func main() {
+	Lab6.RunLab6()
+	fmt.Println("Умаров Ильяс Баходирович")
+	Lab4.RunLab4()
+ Ymarov_Ilyas
 }
