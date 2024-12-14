@@ -10,10 +10,11 @@ import (
 
 func main() {
 	Lab6.RunLab6()
-	
+
 	fmt.Println("Hello world")
 	fmt.Println("Умаров Ильяс Баходирович")
-	
+
+	Lab4.RunLab4()
 	Lab4.RunLab4Tasks()
 	Lab7.RunLab7()
 }
