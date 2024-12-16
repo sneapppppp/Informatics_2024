@@ -14,7 +14,5 @@ func main() {
 	fmt.Println("Hello world")
 	fmt.Println("Умаров Ильяс Баходирович")
 
-	lab4.RunLab4()
-	lab4.RunLab4Tasks()
 	lab7.RunLab7()
 }
