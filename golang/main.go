@@ -13,5 +13,5 @@ func main() {
 	fmt.Println("Hello world")
 	fmt.Println("Умаров Ильяс Баходирович")
 
-	lab7.RunLab7()
+	lab7.Executelab7()
 }
