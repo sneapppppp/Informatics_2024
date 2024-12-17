@@ -5,11 +5,11 @@ import (
 )
 
 func Executelab7() {
-	laptop := &laptop{Name: "Laptop", Price: 1000}
-	phone := &phone{Name: "Phone", Price: 500}
-	tablet := &tablet{Name: "Tablet", Price: 300}
+	Laptop := &Laptop{Name: "Laptop", Price: 1000}
+	Phone := &Phone{Name: "Phone", Price: 500}
+	Tablet := &Tablet{Name: "Tablet", Price: 300}
 
-	products := []Product{laptop, phone, tablet}
+	products := []Product{Laptop, Phone, Tablet}
 
 	fmt.Printf("Total before discount: %.2f\n", CalculateTotal(products))
 
