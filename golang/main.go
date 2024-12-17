@@ -11,8 +11,9 @@ import (
 func main() {
 	Lab6.RunLab6()
 	Lab4.RunLab4()
-	Lab7.ExecuteLab7()
+	
 
 	fmt.Println("Hello world")
 	fmt.Println("Умаров Ильяс Баходирович")
+	Lab7.ExecuteLab7()
 }
