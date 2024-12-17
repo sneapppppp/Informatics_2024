@@ -4,6 +4,14 @@ import (
 	"fmt"
 )
 
+func CalculateTotal(products []Product) float64 {
+	total := 0.0
+	for _, product := range products {
+		total += product.GetPrice()
+	}
+	return total
+}
+
 func Executelab7() {
 	Laptop := &Laptop{Name: "Laptop", Price: 1000}
 	Phone := &Phone{Name: "Phone", Price: 500}
